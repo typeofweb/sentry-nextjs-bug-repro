@@ -1,12 +1,11 @@
-export default function Page({
-  searchParams,
-}: {
-  searchParams: Record<string, string>;
-}) {
+import Link from "next/link";
+
+export default async function Page() {
   return (
     <div>
       <h1>Page</h1>
-      {searchParams["id"]}
+      
+      <Link href="/product/t-shirt?id=1">Click me</Link>
     </div>
   );
 }
